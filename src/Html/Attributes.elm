@@ -305,8 +305,8 @@ tabindex n =
 `input`, `script`, `source`, `track`, and `video`.
 -}
 src : String -> Attribute msg
-src =
-  stringProperty "src"
+src url =
+  Elm.Kernel.VirtualDom.property "src" (Json.string (Elm.Kernel.VirtualDom.toSafeValue url))
 
 
 {-| Declare the height of a `canvas`, `embed`, `iframe`, `img`, `input`,
@@ -492,8 +492,8 @@ acceptCharset =
 {-| The URI of a program that processes the information submitted via a `form`.
 -}
 action : String -> Attribute msg
-action =
-  stringProperty "action"
+action uri =
+  Elm.Kernel.VirtualDom.property "action" (Json.string (Elm.Kernel.VirtualDom.toSafeValue uri))
 
 
 {-| Indicates whether a `form` or an `input` can have their values automatically
@@ -533,8 +533,8 @@ enctype =
 defined in the surrounding `form`.
 -}
 formaction : String -> Attribute msg
-formaction =
-  Elm.Kernel.VirtualDom.attribute "formAction"
+formaction uri =
+  Elm.Kernel.VirtualDom.attribute "formAction" (Elm.Kernel.VirtualDom.toSafeValue uri)
 
 
 {-| Associates an `input` with a `datalist` tag. The datalist gives some
@@ -762,8 +762,8 @@ cite =
 
 {-| The URL of a linked resource, such as `a`, `area`, `base`, or `link`. -}
 href : String -> Attribute msg
-href =
-  stringProperty "href"
+href url =
+  Elm.Kernel.VirtualDom.property "href" (Json.string (Elm.Kernel.VirtualDom.toSafeValue url))
 
 
 {-| Specify where the results of clicking an `a`, `area`, `base`, or `form`
