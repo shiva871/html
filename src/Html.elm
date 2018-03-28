@@ -80,6 +80,8 @@ expect to use frequently will be closer to the top.
 
 -}
 
+
+import Elm.Kernel.VirtualDom
 import VirtualDom
 
 
@@ -171,14 +173,14 @@ map =
 -}
 section : List (Attribute msg) -> List (Html msg) -> Html msg
 section =
-  node "section"
+  Elm.Kernel.VirtualDom.node "section"
 
 
 {-| Defines a section that contains only navigation links.
 -}
 nav : List (Attribute msg) -> List (Html msg) -> Html msg
 nav =
-  node "nav"
+  Elm.Kernel.VirtualDom.node "nav"
 
 
 {-| Defines self-contained content that could exist independently of the rest
@@ -186,7 +188,7 @@ of the content.
 -}
 article : List (Attribute msg) -> List (Html msg) -> Html msg
 article =
-  node "article"
+  Elm.Kernel.VirtualDom.node "article"
 
 
 {-| Defines some content loosely related to the page content. If it is removed,
@@ -194,43 +196,43 @@ the remaining content still makes sense.
 -}
 aside : List (Attribute msg) -> List (Html msg) -> Html msg
 aside =
-  node "aside"
+  Elm.Kernel.VirtualDom.node "aside"
 
 
 {-|-}
 h1 : List (Attribute msg) -> List (Html msg) -> Html msg
 h1 =
-  node "h1"
+  Elm.Kernel.VirtualDom.node "h1"
 
 
 {-|-}
 h2 : List (Attribute msg) -> List (Html msg) -> Html msg
 h2 =
-  node "h2"
+  Elm.Kernel.VirtualDom.node "h2"
 
 
 {-|-}
 h3 : List (Attribute msg) -> List (Html msg) -> Html msg
 h3 =
-  node "h3"
+  Elm.Kernel.VirtualDom.node "h3"
 
 
 {-|-}
 h4 : List (Attribute msg) -> List (Html msg) -> Html msg
 h4 =
-  node "h4"
+  Elm.Kernel.VirtualDom.node "h4"
 
 
 {-|-}
 h5 : List (Attribute msg) -> List (Html msg) -> Html msg
 h5 =
-  node "h5"
+  Elm.Kernel.VirtualDom.node "h5"
 
 
 {-|-}
 h6 : List (Attribute msg) -> List (Html msg) -> Html msg
 h6 =
-  node "h6"
+  Elm.Kernel.VirtualDom.node "h6"
 
 
 {-| Defines the header of a page or section. It often contains a logo, the
@@ -238,7 +240,7 @@ title of the web site, and a navigational table of content.
 -}
 header : List (Attribute msg) -> List (Html msg) -> Html msg
 header =
-  node "header"
+  Elm.Kernel.VirtualDom.node "header"
 
 
 {-| Defines the footer for a page or section. It often contains a copyright
@@ -246,13 +248,13 @@ notice, some links to legal information, or addresses to give feedback.
 -}
 footer : List (Attribute msg) -> List (Html msg) -> Html msg
 footer =
-  node "footer"
+  Elm.Kernel.VirtualDom.node "footer"
 
 
 {-| Defines a section containing contact information. -}
 address : List (Attribute msg) -> List (Html msg) -> Html msg
 address =
-  node "address"
+  Elm.Kernel.VirtualDom.node "address"
 
 
 {-| Defines the main or important content in the document. There is only one
@@ -260,7 +262,7 @@ address =
 -}
 main_ : List (Attribute msg) -> List (Html msg) -> Html msg
 main_ =
-  node "main"
+  Elm.Kernel.VirtualDom.node "main"
 
 
 -- GROUPING CONTENT
@@ -268,7 +270,7 @@ main_ =
 {-| Defines a portion that should be displayed as a paragraph. -}
 p : List (Attribute msg) -> List (Html msg) -> Html msg
 p =
-  node "p"
+  Elm.Kernel.VirtualDom.node "p"
 
 
 {-| Represents a thematic break between paragraphs of a section or article or
@@ -276,7 +278,7 @@ any longer content.
 -}
 hr : List (Attribute msg) -> List (Html msg) -> Html msg
 hr =
-  node "hr"
+  Elm.Kernel.VirtualDom.node "hr"
 
 
 {-| Indicates that its content is preformatted and that this format must be
@@ -284,31 +286,31 @@ preserved.
 -}
 pre : List (Attribute msg) -> List (Html msg) -> Html msg
 pre =
-  node "pre"
+  Elm.Kernel.VirtualDom.node "pre"
 
 
 {-| Represents a content that is quoted from another source. -}
 blockquote : List (Attribute msg) -> List (Html msg) -> Html msg
 blockquote =
-  node "blockquote"
+  Elm.Kernel.VirtualDom.node "blockquote"
 
 
 {-| Defines an ordered list of items. -}
 ol : List (Attribute msg) -> List (Html msg) -> Html msg
 ol =
-  node "ol"
+  Elm.Kernel.VirtualDom.node "ol"
 
 
 {-| Defines an unordered list of items. -}
 ul : List (Attribute msg) -> List (Html msg) -> Html msg
 ul =
-  node "ul"
+  Elm.Kernel.VirtualDom.node "ul"
 
 
 {-| Defines a item of an enumeration list. -}
 li : List (Attribute msg) -> List (Html msg) -> Html msg
 li =
-  node "li"
+  Elm.Kernel.VirtualDom.node "li"
 
 
 {-| Defines a definition list, that is, a list of terms and their associated
@@ -316,37 +318,37 @@ definitions.
 -}
 dl : List (Attribute msg) -> List (Html msg) -> Html msg
 dl =
-  node "dl"
+  Elm.Kernel.VirtualDom.node "dl"
 
 
 {-| Represents a term defined by the next `dd`. -}
 dt : List (Attribute msg) -> List (Html msg) -> Html msg
 dt =
-  node "dt"
+  Elm.Kernel.VirtualDom.node "dt"
 
 
 {-| Represents the definition of the terms immediately listed before it. -}
 dd : List (Attribute msg) -> List (Html msg) -> Html msg
 dd =
-  node "dd"
+  Elm.Kernel.VirtualDom.node "dd"
 
 
 {-| Represents a figure illustrated as part of the document. -}
 figure : List (Attribute msg) -> List (Html msg) -> Html msg
 figure =
-  node "figure"
+  Elm.Kernel.VirtualDom.node "figure"
 
 
 {-| Represents the legend of a figure. -}
 figcaption : List (Attribute msg) -> List (Html msg) -> Html msg
 figcaption =
-  node "figcaption"
+  Elm.Kernel.VirtualDom.node "figcaption"
 
 
 {-| Represents a generic container with no special meaning. -}
 div : List (Attribute msg) -> List (Html msg) -> Html msg
 div =
-  node "div"
+  Elm.Kernel.VirtualDom.node "div"
 
 
 -- TEXT LEVEL SEMANTIC
@@ -354,19 +356,19 @@ div =
 {-| Represents a hyperlink, linking to another resource. -}
 a : List (Attribute msg) -> List (Html msg) -> Html msg
 a =
-  node "a"
+  Elm.Kernel.VirtualDom.node "a"
 
 
 {-| Represents emphasized text, like a stress accent. -}
 em : List (Attribute msg) -> List (Html msg) -> Html msg
 em =
-  node "em"
+  Elm.Kernel.VirtualDom.node "em"
 
 
 {-| Represents especially important text. -}
 strong : List (Attribute msg) -> List (Html msg) -> Html msg
 strong =
-  node "strong"
+  Elm.Kernel.VirtualDom.node "strong"
 
 
 {-| Represents a side comment, that is, text like a disclaimer or a
@@ -374,25 +376,25 @@ copyright, which is not essential to the comprehension of the document.
 -}
 small : List (Attribute msg) -> List (Html msg) -> Html msg
 small =
-  node "small"
+  Elm.Kernel.VirtualDom.node "small"
 
 
 {-| Represents content that is no longer accurate or relevant. -}
 s : List (Attribute msg) -> List (Html msg) -> Html msg
 s =
-  node "s"
+  Elm.Kernel.VirtualDom.node "s"
 
 
 {-| Represents the title of a work. -}
 cite : List (Attribute msg) -> List (Html msg) -> Html msg
 cite =
-  node "cite"
+  Elm.Kernel.VirtualDom.node "cite"
 
 
 {-| Represents an inline quotation. -}
 q : List (Attribute msg) -> List (Html msg) -> Html msg
 q =
-  node "q"
+  Elm.Kernel.VirtualDom.node "q"
 
 
 {-| Represents a term whose definition is contained in its nearest ancestor
@@ -400,7 +402,7 @@ content.
 -}
 dfn : List (Attribute msg) -> List (Html msg) -> Html msg
 dfn =
-  node "dfn"
+  Elm.Kernel.VirtualDom.node "dfn"
 
 
 {-| Represents an abbreviation or an acronym; the expansion of the
@@ -408,7 +410,7 @@ abbreviation can be represented in the title attribute.
 -}
 abbr : List (Attribute msg) -> List (Html msg) -> Html msg
 abbr =
-  node "abbr"
+  Elm.Kernel.VirtualDom.node "abbr"
 
 
 {-| Represents a date and time value; the machine-readable equivalent can be
@@ -416,13 +418,13 @@ represented in the datetime attribute.
 -}
 time : List (Attribute msg) -> List (Html msg) -> Html msg
 time =
-  node "time"
+  Elm.Kernel.VirtualDom.node "time"
 
 
 {-| Represents computer code. -}
 code : List (Attribute msg) -> List (Html msg) -> Html msg
 code =
-  node "code"
+  Elm.Kernel.VirtualDom.node "code"
 
 
 {-| Represents a variable. Specific cases where it should be used include an
@@ -432,13 +434,13 @@ parameter, or a mere placeholder in prose.
 -}
 var : List (Attribute msg) -> List (Html msg) -> Html msg
 var =
-  node "var"
+  Elm.Kernel.VirtualDom.node "var"
 
 
 {-| Represents the output of a program or a computer. -}
 samp : List (Attribute msg) -> List (Html msg) -> Html msg
 samp =
-  node "samp"
+  Elm.Kernel.VirtualDom.node "samp"
 
 
 {-| Represents user input, often from the keyboard, but not necessarily; it
@@ -446,19 +448,19 @@ may represent other input, like transcribed voice commands.
 -}
 kbd : List (Attribute msg) -> List (Html msg) -> Html msg
 kbd =
-  node "kbd"
+  Elm.Kernel.VirtualDom.node "kbd"
 
 
 {-| Represent a subscript. -}
 sub : List (Attribute msg) -> List (Html msg) -> Html msg
 sub =
-  node "sub"
+  Elm.Kernel.VirtualDom.node "sub"
 
 
 {-| Represent a superscript. -}
 sup : List (Attribute msg) -> List (Html msg) -> Html msg
 sup =
-  node "sup"
+  Elm.Kernel.VirtualDom.node "sup"
 
 
 {-| Represents some text in an alternate voice or mood, or at least of
@@ -467,7 +469,7 @@ idiomatic phrase, a thought, or a ship name.
 -}
 i : List (Attribute msg) -> List (Html msg) -> Html msg
 i =
-  node "i"
+  Elm.Kernel.VirtualDom.node "i"
 
 
 {-| Represents a text which to which attention is drawn for utilitarian
@@ -476,7 +478,7 @@ voice.
 -}
 b : List (Attribute msg) -> List (Html msg) -> Html msg
 b =
-  node "b"
+  Elm.Kernel.VirtualDom.node "b"
 
 
 {-| Represents a non-textual annoatation for which the conventional
@@ -485,7 +487,7 @@ labeling a proper name in Chinese text.
 -}
 u : List (Attribute msg) -> List (Html msg) -> Html msg
 u =
-  node "u"
+  Elm.Kernel.VirtualDom.node "u"
 
 
 {-| Represents text highlighted for reference purposes, that is for its
@@ -493,7 +495,7 @@ relevance in another context.
 -}
 mark : List (Attribute msg) -> List (Html msg) -> Html msg
 mark =
-  node "mark"
+  Elm.Kernel.VirtualDom.node "mark"
 
 
 {-| Represents content to be marked with ruby annotations, short runs of text
@@ -503,13 +505,13 @@ Japanese furigana.
 -}
 ruby : List (Attribute msg) -> List (Html msg) -> Html msg
 ruby =
-  node "ruby"
+  Elm.Kernel.VirtualDom.node "ruby"
 
 
 {-| Represents the text of a ruby annotation. -}
 rt : List (Attribute msg) -> List (Html msg) -> Html msg
 rt =
-  node "rt"
+  Elm.Kernel.VirtualDom.node "rt"
 
 
 {-| Represents parenthesis around a ruby annotation, used to display the
@@ -518,7 +520,7 @@ for annotations.
 -}
 rp : List (Attribute msg) -> List (Html msg) -> Html msg
 rp =
-  node "rp"
+  Elm.Kernel.VirtualDom.node "rp"
 
 
 {-| Represents text that must be isolated from its surrounding for
@@ -527,7 +529,7 @@ different, or unknown, directionality.
 -}
 bdi : List (Attribute msg) -> List (Html msg) -> Html msg
 bdi =
-  node "bdi"
+  Elm.Kernel.VirtualDom.node "bdi"
 
 
 {-| Represents the directionality of its children, in order to explicitly
@@ -535,7 +537,7 @@ override the Unicode bidirectional algorithm.
 -}
 bdo : List (Attribute msg) -> List (Html msg) -> Html msg
 bdo =
-  node "bdo"
+  Elm.Kernel.VirtualDom.node "bdo"
 
 
 {-| Represents text with no specific meaning. This has to be used when no other
@@ -544,13 +546,13 @@ often brought by global attributes like `class`, `lang`, or `dir`.
 -}
 span : List (Attribute msg) -> List (Html msg) -> Html msg
 span =
-  node "span"
+  Elm.Kernel.VirtualDom.node "span"
 
 
 {-| Represents a line break. -}
 br : List (Attribute msg) -> List (Html msg) -> Html msg
 br =
-  node "br"
+  Elm.Kernel.VirtualDom.node "br"
 
 
 {-| Represents a line break opportunity, that is a suggested point for
@@ -558,7 +560,7 @@ wrapping text in order to improve readability of text split on several lines.
 -}
 wbr : List (Attribute msg) -> List (Html msg) -> Html msg
 wbr =
-  node "wbr"
+  Elm.Kernel.VirtualDom.node "wbr"
 
 
 -- EDITS
@@ -566,13 +568,13 @@ wbr =
 {-| Defines an addition to the document. -}
 ins : List (Attribute msg) -> List (Html msg) -> Html msg
 ins =
-  node "ins"
+  Elm.Kernel.VirtualDom.node "ins"
 
 
 {-| Defines a removal from the document. -}
 del : List (Attribute msg) -> List (Html msg) -> Html msg
 del =
-  node "del"
+  Elm.Kernel.VirtualDom.node "del"
 
 
 -- EMBEDDED CONTENT
@@ -580,13 +582,13 @@ del =
 {-| Represents an image. -}
 img : List (Attribute msg) -> List (Html msg) -> Html msg
 img =
-  node "img"
+  Elm.Kernel.VirtualDom.node "img"
 
 
 {-| Embedded an HTML document. -}
 iframe : List (Attribute msg) -> List (Html msg) -> Html msg
 iframe =
-  node "iframe"
+  Elm.Kernel.VirtualDom.node "iframe"
 
 
 {-| Represents a integration point for an external, often non-HTML,
@@ -594,7 +596,7 @@ application or interactive content.
 -}
 embed : List (Attribute msg) -> List (Html msg) -> Html msg
 embed =
-  node "embed"
+  Elm.Kernel.VirtualDom.node "embed"
 
 
 {-| Represents an external resource, which is treated as an image, an HTML
@@ -602,25 +604,25 @@ sub-document, or an external resource to be processed by a plug-in.
 -}
 object : List (Attribute msg) -> List (Html msg) -> Html msg
 object =
-  node "object"
+  Elm.Kernel.VirtualDom.node "object"
 
 
 {-| Defines parameters for use by plug-ins invoked by `object` elements. -}
 param : List (Attribute msg) -> List (Html msg) -> Html msg
 param =
-  node "param"
+  Elm.Kernel.VirtualDom.node "param"
 
 
 {-| Represents a video, the associated audio and captions, and controls. -}
 video : List (Attribute msg) -> List (Html msg) -> Html msg
 video =
-  node "video"
+  Elm.Kernel.VirtualDom.node "video"
 
 
 {-| Represents a sound or audio stream. -}
 audio : List (Attribute msg) -> List (Html msg) -> Html msg
 audio =
-  node "audio"
+  Elm.Kernel.VirtualDom.node "audio"
 
 
 {-| Allows authors to specify alternative media resources for media elements
@@ -628,7 +630,7 @@ like `video` or `audio`.
 -}
 source : List (Attribute msg) -> List (Html msg) -> Html msg
 source =
-  node "source"
+  Elm.Kernel.VirtualDom.node "source"
 
 
 {-| Allows authors to specify timed text track for media elements like `video`
@@ -636,19 +638,19 @@ or `audio`.
 -}
 track : List (Attribute msg) -> List (Html msg) -> Html msg
 track =
-  node "track"
+  Elm.Kernel.VirtualDom.node "track"
 
 
 {-| Represents a bitmap area for graphics rendering. -}
 canvas : List (Attribute msg) -> List (Html msg) -> Html msg
 canvas =
-  node "canvas"
+  Elm.Kernel.VirtualDom.node "canvas"
 
 
 {-| Defines a mathematical formula. -}
 math : List (Attribute msg) -> List (Html msg) -> Html msg
 math =
-  node "math"
+  Elm.Kernel.VirtualDom.node "math"
 
 
 -- TABULAR DATA
@@ -656,64 +658,64 @@ math =
 {-| Represents data with more than one dimension. -}
 table : List (Attribute msg) -> List (Html msg) -> Html msg
 table =
-  node "table"
+  Elm.Kernel.VirtualDom.node "table"
 
 
 {-| Represents the title of a table. -}
 caption : List (Attribute msg) -> List (Html msg) -> Html msg
 caption =
-  node "caption"
+  Elm.Kernel.VirtualDom.node "caption"
 
 
 {-| Represents a set of one or more columns of a table. -}
 colgroup : List (Attribute msg) -> List (Html msg) -> Html msg
 colgroup =
-  node "colgroup"
+  Elm.Kernel.VirtualDom.node "colgroup"
 
 
 {-| Represents a column of a table. -}
 col : List (Attribute msg) -> List (Html msg) -> Html msg
 col =
-  node "col"
+  Elm.Kernel.VirtualDom.node "col"
 
 
 {-| Represents the block of rows that describes the concrete data of a table.
 -}
 tbody : List (Attribute msg) -> List (Html msg) -> Html msg
 tbody =
-  node "tbody"
+  Elm.Kernel.VirtualDom.node "tbody"
 
 
 {-| Represents the block of rows that describes the column labels of a table.
 -}
 thead : List (Attribute msg) -> List (Html msg) -> Html msg
 thead =
-  node "thead"
+  Elm.Kernel.VirtualDom.node "thead"
 
 
 {-| Represents the block of rows that describes the column summaries of a table.
 -}
 tfoot : List (Attribute msg) -> List (Html msg) -> Html msg
 tfoot =
-  node "tfoot"
+  Elm.Kernel.VirtualDom.node "tfoot"
 
 
 {-| Represents a row of cells in a table. -}
 tr : List (Attribute msg) -> List (Html msg) -> Html msg
 tr =
-  node "tr"
+  Elm.Kernel.VirtualDom.node "tr"
 
 
 {-| Represents a data cell in a table. -}
 td : List (Attribute msg) -> List (Html msg) -> Html msg
 td =
-  node "td"
+  Elm.Kernel.VirtualDom.node "td"
 
 
 {-| Represents a header cell in a table. -}
 th : List (Attribute msg) -> List (Html msg) -> Html msg
 th =
-  node "th"
+  Elm.Kernel.VirtualDom.node "th"
 
 
 -- FORMS
@@ -723,55 +725,55 @@ server for processing.
 -}
 form : List (Attribute msg) -> List (Html msg) -> Html msg
 form =
-  node "form"
+  Elm.Kernel.VirtualDom.node "form"
 
 
 {-| Represents a set of controls. -}
 fieldset : List (Attribute msg) -> List (Html msg) -> Html msg
 fieldset =
-  node "fieldset"
+  Elm.Kernel.VirtualDom.node "fieldset"
 
 
 {-| Represents the caption for a `fieldset`. -}
 legend : List (Attribute msg) -> List (Html msg) -> Html msg
 legend =
-  node "legend"
+  Elm.Kernel.VirtualDom.node "legend"
 
 
 {-| Represents the caption of a form control. -}
 label : List (Attribute msg) -> List (Html msg) -> Html msg
 label =
-  node "label"
+  Elm.Kernel.VirtualDom.node "label"
 
 
 {-| Represents a typed data field allowing the user to edit the data. -}
 input : List (Attribute msg) -> List (Html msg) -> Html msg
 input =
-  node "input"
+  Elm.Kernel.VirtualDom.node "input"
 
 
 {-| Represents a button. -}
 button : List (Attribute msg) -> List (Html msg) -> Html msg
 button =
-  node "button"
+  Elm.Kernel.VirtualDom.node "button"
 
 
 {-| Represents a control allowing selection among a set of options. -}
 select : List (Attribute msg) -> List (Html msg) -> Html msg
 select =
-  node "select"
+  Elm.Kernel.VirtualDom.node "select"
 
 
 {-| Represents a set of predefined options for other controls. -}
 datalist : List (Attribute msg) -> List (Html msg) -> Html msg
 datalist =
-  node "datalist"
+  Elm.Kernel.VirtualDom.node "datalist"
 
 
 {-| Represents a set of options, logically grouped. -}
 optgroup : List (Attribute msg) -> List (Html msg) -> Html msg
 optgroup =
-  node "optgroup"
+  Elm.Kernel.VirtualDom.node "optgroup"
 
 
 {-| Represents an option in a `select` element or a suggestion of a `datalist`
@@ -779,25 +781,25 @@ element.
 -}
 option : List (Attribute msg) -> List (Html msg) -> Html msg
 option =
-  node "option"
+  Elm.Kernel.VirtualDom.node "option"
 
 
 {-| Represents a multiline text edit control. -}
 textarea : List (Attribute msg) -> List (Html msg) -> Html msg
 textarea =
-  node "textarea"
+  Elm.Kernel.VirtualDom.node "textarea"
 
 
 {-| Represents the result of a calculation. -}
 output : List (Attribute msg) -> List (Html msg) -> Html msg
 output =
-  node "output"
+  Elm.Kernel.VirtualDom.node "output"
 
 
 {-| Represents the completion progress of a task. -}
 progress : List (Attribute msg) -> List (Html msg) -> Html msg
 progress =
-  node "progress"
+  Elm.Kernel.VirtualDom.node "progress"
 
 
 {-| Represents a scalar measurement (or a fractional value), within a known
@@ -805,7 +807,7 @@ range.
 -}
 meter : List (Attribute msg) -> List (Html msg) -> Html msg
 meter =
-  node "meter"
+  Elm.Kernel.VirtualDom.node "meter"
 
 
 -- INTERACTIVE ELEMENTS
@@ -815,23 +817,23 @@ or controls.
 -}
 details : List (Attribute msg) -> List (Html msg) -> Html msg
 details =
-  node "details"
+  Elm.Kernel.VirtualDom.node "details"
 
 
 {-| Represents a summary, caption, or legend for a given `details`. -}
 summary : List (Attribute msg) -> List (Html msg) -> Html msg
 summary =
-  node "summary"
+  Elm.Kernel.VirtualDom.node "summary"
 
 
 {-| Represents a command that the user can invoke. -}
 menuitem : List (Attribute msg) -> List (Html msg) -> Html msg
 menuitem =
-  node "menuitem"
+  Elm.Kernel.VirtualDom.node "menuitem"
 
 
 {-| Represents a list of commands. -}
 menu : List (Attribute msg) -> List (Html msg) -> Html msg
 menu =
-  node "menu"
+  Elm.Kernel.VirtualDom.node "menu"
 
