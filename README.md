@@ -22,12 +22,12 @@ view count =
     ]
 ```
 
-If you call `view 42` you get something like this:
+If you call `view 43` you get something like this:
 
 ```html
 <div>
   <button>-</button>
-  <div>42</div>
+  <div>43</div>
   <button>+</button>
 </div>
 ```
